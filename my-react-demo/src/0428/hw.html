@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+    <div id="page1">我是page1</div>
+    <div id="page2" style="display: none;">我是page2</div>
+    <div id="page3" style="display: none;">我是page3</div>
+
+    <div style="display: flex;">
+        <button id="previousBtn" onclick="previousPage();" style="display:none;">上一步</button>
+        <button id="nextBtn" onclick="nextPage();">下一步</button>
+    </div>
+
+    <script>
+
+        let pageNumber = 1
+        function nextPage() {
+            if (pageNumber == 1) {
+                document.querySelector("#page1").style.display = "none";
+                document.querySelector("#page2").style.display = "block";
+                document.querySelector("#page3").style.display = "none";
+                document.querySelector("#nextBtn").style.display = "block";
+                document.querySelector("#previousBtn").style.display = "block";
+                pageNumber++;
+            }
+            else if (pageNumber == 2) {
+                document.querySelector("#page1").style.display = "none";
+                document.querySelector("#page2").style.display = "none";
+                document.querySelector("#page3").style.display = "block";
+                document.querySelector("#nextBtn").style.display = "none";
+                document.querySelector("#previousBtn").style.display = "block";
+                pageNumber++;
+            }
+        }
+
+
+        function previousPage() {
+            if (pageNumber == 2) {
+                document.querySelector("#page1").style.display = "block";
+                document.querySelector("#page2").style.display = "none";
+                document.querySelector("#page3").style.display = "none";
+                document.querySelector("#nextBtn").style.display = "block";
+                document.querySelector("#previousBtn").style.display = "none";
+                pageNumber--;
+            }
+            else if (pageNumber == 3) {
+                document.querySelector("#page1").style.display = "none";
+                document.querySelector("#page2").style.display = "block";
+                document.querySelector("#page3").style.display = "none";
+                document.querySelector("#nextBtn").style.display = "block";
+                document.querySelector("#previousBtn").style.display = "block";
+                pageNumber--;
+            }
+        }
+    </script>
+</body>
+</html>

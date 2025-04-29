@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 分頁效果 -->
+    <div>
+        <span onclick="changeToAbout();">ABOUT</span>
+        <span onclick="changeToNews();">News</span>
+    </div>
+    <hr>
+
+    <div id="about">大家好，我是XXX</div>
+    <div id="news" style="display: none;">
+        Lormrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+    </div>
+
+    <script>
+        function changeToNews() {
+            //隱藏about
+            let about=document.querySelector("#about");
+            about.style.display="none";
+
+            let news=document.querySelector("#news");
+            news.style.display="block"
+        }
+        function changeToAbout() {
+            //隱藏news
+            let about=document.querySelector("#about");
+            about.style.display="block";
+
+            let news=document.querySelector("#news");
+            news.style.display="none"
+        }
+
+    </script>
+</body>
+
+</html>
